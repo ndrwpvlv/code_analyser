@@ -2,7 +2,7 @@
 
 **code_analyser** - first homework of OTUS Python course. Run script to get unique verbs from code 
 
-# Installation
+## Installation
 ```
 sudo -H pip3 install .../code_analyser.zip
 
