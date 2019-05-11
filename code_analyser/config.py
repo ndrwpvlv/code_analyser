@@ -14,5 +14,5 @@ config = {
         'sqlalchemy',
     ],
     'EXTENSION': 'py',
-    'FILES_NUMBER_LIMIT': 100
+    'FILES_NUMBER_LIMIT': 10000
 }
