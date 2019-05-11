@@ -115,8 +115,7 @@ def get_all_words_in_path(path: str, file_extension: str, list_size_limit: int) 
     function_names = extract_functions_names(
         [get_all_names(tree) for tree in trees]
     )
-    words_in_path = flat([[substr for substr in name.split('_') if substr] for name in function_names])
-    return words_in_path
+    return flat([[substr for substr in name.split('_') if substr] for name in function_names])
 
 
 def get_all_functions_names_in_path(path: str, file_extension: str, list_size_limit: int) -> list:
@@ -130,8 +129,7 @@ def get_all_functions_names_in_path(path: str, file_extension: str, list_size_li
     files_paths = get_files_paths(path, file_extension, list_size_limit)
     trees = get_trees(files_paths)
     functions_names_from_trees = get_functions_names_from_trees(trees)
-    function_names_extracted = extract_functions_names(functions_names_from_trees)
-    return function_names_extracted
+    return extract_functions_names(functions_names_from_trees)
 
 
 def get_all_verbs_in_path(path: str, file_extension: str, list_size_limit: int) -> list:
@@ -143,8 +141,7 @@ def get_all_verbs_in_path(path: str, file_extension: str, list_size_limit: int) 
     :return: List of find verbs, list
     """
     function_names = get_all_functions_names_in_path(path, file_extension, list_size_limit)
-    verbs_in_path = flat([get_verbs_from_function_name(name) for name in function_names])
-    return verbs_in_path
+    return flat([get_verbs_from_function_name(name) for name in function_names])
 
 
 def create_words_top(words: list, words_list_size: int) -> list:
