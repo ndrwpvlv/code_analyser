@@ -23,7 +23,7 @@ def get_args():
     return parser.parse_args(sys.argv[1:])
 
 
-if __name__ == '__main__':
+def main():
     args = get_args()
 
     words = []
@@ -37,3 +37,7 @@ if __name__ == '__main__':
     print('VERB: COUNT')
     for word in words_top:
         print('%s: %i' % (word[0], word[1]))
+
+
+if __name__ == '__main__':
+    main()
