@@ -24,10 +24,7 @@ def is_verb(word: str) -> bool:
     :param word: String with one word, str
     :return: Check of result for verb (True or False), bool
     """
-    if not word:
-        return False
-    pos_info = nltk.pos_tag([word])
-    return pos_info[0][1] == 'VB'
+    return False if not word else nltk.pos_tag([word])[0][1] == 'VB'
 
 
 def get_files_paths(path: str, file_extension: str, list_size_limit: int) -> list:
