@@ -13,6 +13,6 @@ config = {
         'requests',
         'sqlalchemy',
     ],
-    'EXTENSION': 'py',
+    'EXTENSION': '.py',
     'FILES_NUMBER_LIMIT': 10000
 }

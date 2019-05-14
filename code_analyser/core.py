@@ -36,7 +36,7 @@ def get_files_paths(path: str, file_extension: str, list_size_limit: int) -> lis
     :return: List of files paths, list
     """
     return list(
-        itertools.islice((f for f in glob.glob(path + '**/*.' + file_extension, recursive=True)), list_size_limit))
+        itertools.islice((f for f in glob.glob(path + '**/*' + file_extension, recursive=True)), list_size_limit))
 
 
 def get_trees(files_paths: list, with_file_path: bool = False, with_file_content: bool = False) -> ast:

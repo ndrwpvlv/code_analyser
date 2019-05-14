@@ -25,9 +25,7 @@ def get_args():
 
 def main():
     args = get_args()
-
     words = []
-
     for package in args.packages:
         path = os.path.join(args.path, package)
         words += get_all_verbs_in_path(path, args.extension, args.files_number_limit)
