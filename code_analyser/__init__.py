@@ -4,4 +4,7 @@ __version__ = '0.0.1'
 
 import nltk
 
-nltk.download('averaged_perceptron_tagger')
+try:
+    nltk.data.find('tokenizers')
+except LookupError:
+    nltk.download('popular')
